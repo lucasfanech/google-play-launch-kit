@@ -1,0 +1,10 @@
+{
+  "name": "google-play-launch-kit",
+  "version": "1.0.0",
+  "description": "Ship Expo/React Native apps to Google Play end to end: store screenshots and mockups, multilingual listings, Play Console app setup and declarations, AdMob with GDPR consent, signed releases with R8 smoke tests, and the browser techniques to drive Google consoles.",
+  "author": { "name": "Lucas Fanech", "url": "https://github.com/lucasfanech" },
+  "homepage": "https://github.com/lucasfanech/google-play-launch-kit",
+  "repository": "https://github.com/lucasfanech/google-play-launch-kit",
+  "license": "MIT",
+  "keywords": ["google-play", "play-console", "expo", "react-native", "android", "release", "admob", "store-listing", "screenshots"]
+}

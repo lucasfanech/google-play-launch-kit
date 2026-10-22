@@ -1,0 +1,16 @@
+{
+  "name": "lucasfanech",
+  "description": "Claude Code plugins by Lucas Fanech for shipping mobile apps.",
+  "owner": {
+    "name": "Lucas Fanech",
+    "url": "https://github.com/lucasfanech"
+  },
+  "plugins": [
+    {
+      "name": "google-play-launch-kit",
+      "source": "./",
+      "description": "Ship Expo/React Native apps to Google Play end to end (screenshots, listings, Play Console forms, AdMob, signed releases).",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "My Game",
+  "languages": ["fr", "en"],
+  "raw": "store/raw",
+  "out": "store/play",
+  "icon": "assets/images/icon.png",
+  "fonts": {
+    "display": "node_modules/@expo-google-fonts/lilita-one/400Regular/LilitaOne_400Regular.ttf",
+    "body": "node_modules/@expo-google-fonts/fredoka/700Bold/Fredoka_700Bold.ttf"
+  },
+  "theme": {
+    "ink": "#1B2140",
+    "bg1": "#FF9B1F", "bg2": "#F78502", "bg3": "#E86F00",
+    "glow": "#FFD27A", "accent": "#FFC531",
+    "title": "#FFFFFF", "pill": "#FFFFFF",
+    "rays": true
+  },
+  "devices": {
+    "phone":  { "captureW": 1080, "captureH": 2400, "crop": 0 },
+    "tablet": { "captureW": 1600, "captureH": 2560, "crop": 125 }
+  },
+  "devicesToRender": ["phone", "tablet"],
+  "feature": { "title": ["MY", "GAME"], "art": "assets/images/icon.png" },
+  "screens": [
+    { "key": "home", "file": "1-home.jpg", "burst": "WOW!" },
+    { "key": "collection", "file": "2-collection.jpg", "hero": "assets/thumbs/hero.png", "side": "right" },
+    { "key": "shop", "file": "3-shop.jpg", "hero": "assets/thumbs/hero2.png", "side": "left" }
+  ],
+  "copy": {
+    "fr": {
+      "home": ["TAPE LES", "MONSTRES !", "Des combats en 3D"],
+      "collection": ["10 HÉROS", "À COLLECTIONNER", "Communs à légendaires"],
+      "shop": ["UN ARSENAL", "ABSURDE", "Tes armes frappent pour toi"],
+      "feature": ["Tape, frappe, collectionne", "en 3D"]
+    },
+    "en": {
+      "home": ["BONK THE", "MONSTERS!", "3D battles"],
+      "collection": ["10 HEROES", "TO COLLECT", "Common to legendary"],
+      "shop": ["AN ABSURD", "ARSENAL", "Your weapons fight for you"],
+      "feature": ["Tap, bonk and collect", "in 3D"]
+    }
+  }
+}
