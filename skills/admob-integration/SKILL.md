@@ -28,8 +28,10 @@ are in `play-console-app-setup`.
    translations for the app's languages, buttons Consent / Do not consent / Manage options all
    enabled -> Publish (it can take up to an hour to show up in the app).
 4. Later, once the app is public on Play: Apps -> the app -> "Ajouter un magasin d'applications"
-   -> search the package -> link. Before that the search finds nothing and serving stays
-   "limited"; nothing to do but wait. Also add `app-ads.txt` on the developer website then.
+   -> search the package (or paste the Play URL) -> link. Before that the search finds nothing
+   and serving stays "limited"; nothing to do but wait. Also publish `app-ads.txt` on the
+   developer website then: `app-website` builds the site on Cloudflare, sets it in the Play
+   listing and verifies the app in AdMob.
 
 ## 3. Code (Expo, react-native-google-mobile-ads)
 

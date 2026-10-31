@@ -112,4 +112,7 @@ Rules that matter:
   changes is sent for review from "Vue d'ensemble de la publication" / Publishing overview.
 - Personal developer accounts created after Nov 2023 need a closed test with 12+ testers for
   14 days before production; organization accounts do not.
-- AdMob can link an app to a store only once the app is publicly listed.
+- AdMob can link an app to a store only once the app is publicly listed; for a new app the
+  package search may return nothing while the full Play URL finds it.
+- On a published app, the listing's contact details (email, phone, website) go live at once:
+  "Enregistrer et publier" + a confirmation dialog, no review.

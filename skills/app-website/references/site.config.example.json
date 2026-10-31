@@ -1,0 +1,101 @@
+{
+  "_notes": {
+    "paths": "relative to the directory site.mjs runs in; {lang} is replaced by each 2-letter language (missing files fall back to defaultLanguage)",
+    "host": "one-level subdomain of a Cloudflare zone, not www or m",
+    "out": "folder that receives public/ (generated) and wrangler.jsonc",
+    "admobPublisherIds": "each becomes 'google.com, pub-..., DIRECT, f08c47fec0942fa0' in app-ads.txt; empty = no app-ads.txt",
+    "appAdsExtraLines": "other authorized sellers (mediation networks), verbatim",
+    "theme": "#RRGGBB; bg1 top of the hero, bg2 main background, bg3 deepest, glow halo, accent pills and buttons, ink text and footer",
+    "fonts": "optional ttf/otf/woff2; display for titles (800), body (500) and bodyBold (700); an OFL/LICENSE file next to them is copied",
+    "images": "icon 512 px PNG; hero = raw home screenshot (shown in the phone); shots = captioned store screenshots; og = feature graphic",
+    "texts": "one object per language; features = [emoji, title, one or two sentences]",
+    "rating": "content rating shown as a pill, or empty",
+    "cloudflareAccountId": "only when the Cloudflare login has several accounts"
+  },
+  "name": "Hikelog",
+  "slug": "hikelog",
+  "host": "hikelog.example.com",
+  "out": "site",
+  "package": "com.example.hikelog",
+  "publisher": "Example Studio",
+  "year": 2026,
+  "contactEmail": "hello@example.com",
+  "privacyPolicy": "https://sites.google.com/view/hikelog-privacy",
+  "rating": "PEGI 3",
+  "admobPublisherIds": ["pub-0000000000000000"],
+  "appAdsExtraLines": [],
+  "compatibilityDate": "2026-10-01",
+  "defaultLanguage": "en",
+  "languages": ["en", "fr"],
+  "theme": {
+    "ink": "#10241C",
+    "bg1": "#16694F",
+    "bg2": "#0E4D3A",
+    "bg3": "#0A3A2C",
+    "glow": "#2E7A61",
+    "accent": "#BDEFC9"
+  },
+  "fonts": {
+    "display": "assets/fonts/ArchivoExpanded-ExtraBold.ttf",
+    "body": "assets/fonts/Archivo-Medium.ttf",
+    "bodyBold": "assets/fonts/Archivo-Bold.ttf"
+  },
+  "images": {
+    "icon": "store/play/icon-512.png",
+    "hero": "store/raw/phone/{lang}/1-home.jpg",
+    "shots": [
+      "store/play/{lang}/phone/1-home.jpg",
+      "store/play/{lang}/phone/2-map.jpg",
+      "store/play/{lang}/phone/3-stats.jpg"
+    ],
+    "og": "store/play/{lang}/feature-graphic.jpg"
+  },
+  "texts": {
+    "en": {
+      "title": "Hikelog — Your hikes, mapped offline",
+      "description": "Record your hikes offline and keep every trail in one place.",
+      "tagline": "Record your hikes offline and keep every trail in one place.",
+      "langLabel": "Language",
+      "free": "Free",
+      "badgeAlt": "Get it on Google Play",
+      "shotsTitle": "The app in pictures",
+      "shotsLabel": "Screenshots",
+      "featTitle": "In the app",
+      "finalTitle": "Ready for the trail?",
+      "privacy": "Privacy policy",
+      "contact": "Contact:",
+      "notFound": "Page not found",
+      "home": "Home",
+      "features": [
+        ["🗺️", "Offline maps", "Download a region once and follow your track without signal."],
+        ["📈", "Your stats", "Distance, climb and pace for every hike, week after week."],
+        ["📷", "Photos on the trail", "Pin photos to the exact spot where you took them."]
+      ],
+      "note": "Hikelog is free and contains ads: a full-screen ad may appear after you save a hike, at most once every 3 minutes. No banners. In English and French.",
+      "footerNote": ""
+    },
+    "fr": {
+      "title": "Hikelog — Vos randos, cartographiées hors ligne",
+      "description": "Enregistrez vos randonnées hors ligne et gardez tous vos sentiers au même endroit.",
+      "tagline": "Enregistrez vos randonnées hors ligne et gardez tous vos sentiers au même endroit.",
+      "langLabel": "Langue",
+      "free": "Gratuit",
+      "badgeAlt": "Disponible sur Google Play",
+      "shotsTitle": "L'appli en images",
+      "shotsLabel": "Captures d'écran",
+      "featTitle": "Dans l'appli",
+      "finalTitle": "Prêt pour le sentier ?",
+      "privacy": "Politique de confidentialité",
+      "contact": "Contact :",
+      "notFound": "Page introuvable",
+      "home": "Accueil",
+      "features": [
+        ["🗺️", "Cartes hors ligne", "Téléchargez une région une fois et suivez votre tracé sans réseau."],
+        ["📈", "Vos statistiques", "Distance, dénivelé et rythme de chaque rando, semaine après semaine."],
+        ["📷", "Photos sur le sentier", "Épinglez vos photos à l'endroit exact où vous les avez prises."]
+      ],
+      "note": "Hikelog est gratuite et contient des publicités : une publicité plein écran peut s'afficher après l'enregistrement d'une rando, au plus une fois toutes les 3 minutes. Pas de bannière. En anglais et en français.",
+      "footerNote": ""
+    }
+  }
+}

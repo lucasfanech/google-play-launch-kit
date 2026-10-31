@@ -2,8 +2,8 @@
 
 A Claude Code plugin that takes an Expo / React Native app from "it runs on my emulator" to
 "testers install it from Google Play" and then production - store visuals, multilingual listing,
-Play Console forms, AdMob, signed releases - including the browser techniques that make Google
-consoles automatable.
+Play Console forms, AdMob, signed releases, the app's website - including the browser techniques
+that make Google consoles automatable.
 
 Born from shipping a real game end to end; every pitfall it hit is written down in the skills.
 
@@ -28,6 +28,7 @@ Or from a terminal: `claude plugin marketplace add lucasfanech/google-play-launc
 | `store-listing-i18n` | Multilingual title / short / full description following Play metadata rules, a validator script, and per-language entry of texts and localized graphics |
 | `android-play-release` | Upload key + signing plugin, version bump, release branch, patch notes in every language, signed AAB, R8 release smoke test, tag + PR, track release |
 | `admob-integration` | Compliant AdMob: UMP consent before init, test ads in dev, rewarded + capped interstitials, GDPR message, privacy policy (template + Google Sites), store linking |
+| `app-website` | The app's website on a Cloudflare subdomain (free static Worker, help to set up Cloudflare and a domain): a landing page in every store language generated from the project, set as the Play listing's developer website, with the `app-ads.txt` AdMob needs to verify the app |
 | `expo-android-emulator` | Dev builds on the macOS emulator: JDK/NDK, Metro port conflicts, "Unable to load script", storage full, per-app locale |
 
 ## Scripts
@@ -40,11 +41,15 @@ Or from a terminal: `claude plugin marketplace add lucasfanech/google-play-launc
 - `skills/android-play-release/scripts/release.mjs` - `init | status | bump | notes-check | keystore | build | smoke`
 - `skills/android-play-release/templates/with-release-signing.js` - Expo config plugin for release signing
 - `skills/admob-integration/templates/` - ads module and privacy policy (FR/EN) templates
+- `skills/app-website/scripts/site.mjs` - `init | build | check`: drafts `site.config.json` from the
+  project, generates the site (templates in `templates/`, example in `references/`), and checks DNS,
+  `app-ads.txt` as Google's crawler sees it and the Play listing's website
 
 ## Requirements
 
 macOS with Android Studio (JBR, SDK, an emulator), Node 20+, Google Chrome, an Expo (CNG) project.
-Console automation needs the Claude in Chrome extension for file uploads. The skills always ask
+Console automation needs the Claude in Chrome extension for file uploads. The app website needs
+a Cloudflare account (Free plan) and a domain on it. The skills always ask
 before legal declarations, sending for review or publishing.
 
 ## License

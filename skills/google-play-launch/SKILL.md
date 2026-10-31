@@ -56,8 +56,9 @@ Publishing overview (new apps stay invisible to testers until then) -> tester li
 ## 7. Production
 
 After review passes and testers are happy (and the 14-day closed test if the account requires
-it): promote or create a production release with a staged rollout, then link the app in AdMob
-(only possible once public) and publish `app-ads.txt`.
+it): promote or create a production release with a staged rollout, then `app-website`: the
+app's site on a Cloudflare subdomain, set as the listing's developer website, with `app-ads.txt`,
+and the app linked and verified in AdMob (only possible once public).
 
 ## Troubleshooting quick map
 
@@ -65,7 +66,8 @@ it): promote or create a production release with a staged rollout, then link the
 |---|---|
 | Testers: "app not found" / not in Play Store | changes never sent for review on a new app; Play Store signed in with another account; tester used another app's link |
 | Crash at launch only from Play | R8 in release builds - read the crash's `r8-map-id`, `usage.txt`; keep rule via `extraProguardRules`; smoke-test release |
-| AdMob can't find the app | app not public yet - link after production launch |
+| AdMob can't find the app | app not public yet - link after production launch; then paste the Play URL instead of the package |
+| AdMob "Examen requis" / "Verify app" fails | developer website + `app-ads.txt` missing (`app-website`), or not crawled yet (up to 7 days) |
 | Release bundle fails on native-only imports | `app.json` `web.output: "server"` - use `"single"` (or `static`) |
 | Play rejects the AAB versionCode | bump again; every upload needs a higher versionCode |
 | Upload button does nothing in the in-app browser | use Claude in Chrome for files; ask the user to drag files > 10 MB |

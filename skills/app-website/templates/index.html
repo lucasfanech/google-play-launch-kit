@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="{{LANG}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <meta name="theme-color" content="{{THEME_COLOR}}" />
+    <link rel="canonical" href="{{URL}}" />
+    <link rel="icon" type="image/png" href="/img/icon-192.png" />
+    <link rel="apple-touch-icon" href="/img/icon-192.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{NAME}}" />
+    <meta property="og:description" content="{{DESCRIPTION}}" />
+    <meta property="og:image" content="{{URL}}img/og.jpg" />
+    <meta property="og:url" content="{{URL}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap bar">
+        <a class="brand" href="/"><img src="/img/icon-192.png" alt="" width="40" height="40" />{{NAME}}</a>
+        {{LANG_BUTTONS}}
+      </div>
+      <div class="wrap hero-grid">
+        <div>
+          <h1>{{NAME}}</h1>
+          <p class="tag" data-i18n="tagline">{{TAGLINE}}</p>
+          <div class="cta-row">
+            <a class="cta" href="{{PLAY_URL}}"><img data-badge src="/img/badge-{{LANG}}.png" alt="{{BADGE_ALT}}" width="181" height="70" /></a>
+            <div class="facts">
+              <span class="fact" data-i18n="free">{{FREE}}</span><span class="fact">Android</span>{{RATING}}
+            </div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="phone"><img data-hero src="/img/hero-{{LANG}}.jpg" alt="" /></div>
+          <img class="badge-icon" src="/img/icon-192.png" alt="" width="120" height="120" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="band light">
+        <div class="wrap">
+          <h2 data-i18n="shotsTitle">{{SHOTS_TITLE}}</h2>
+          <div class="shots" tabindex="0" aria-label="{{SHOTS_LABEL}}">{{SHOTS}}</div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <h2 class="on-dark" data-i18n="featTitle">{{FEAT_TITLE}}</h2>
+          <div class="features" id="features">{{FEATURES}}</div>
+          <p class="note" data-i18n="note">{{NOTE}}</p>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="wrap">
+          <h2 data-i18n="finalTitle">{{FINAL_TITLE}}</h2>
+          <a class="cta" href="{{PLAY_URL}}"><img data-badge src="/img/badge-{{LANG}}.png" alt="{{BADGE_ALT}}" width="181" height="70" /></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap cols">
+        <div>
+          <p><strong>{{NAME}}</strong> · © {{YEAR}} {{PUBLISHER}}</p>
+          <p data-i18n="footerNote">{{FOOTER_NOTE}}</p>
+        </div>
+        <div>
+          <p><a href="{{PRIVACY_URL}}" rel="noopener" data-i18n="privacy">{{PRIVACY}}</a></p>
+          <p><span data-i18n="contact">{{CONTACT}}</span> <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
